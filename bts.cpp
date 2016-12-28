@@ -85,3 +85,29 @@ void bts::printInOrderPrivate(node* ptr)
 		cout<<"the tree is empty"<<endl;
 	}
 }
+
+bts::node* bts::returnNode(int key)
+{
+	return returnNodePrivate(key, root);
+}
+bts::node* bts::returnNodePrivate(int key,node* ptr )
+{
+	if (ptr != NULL)
+	{
+		if (ptr->key == key )
+			return ptr;		
+		
+		else
+		{
+			if (key< ptr->key)
+				return returnNodePrivate(key,ptr->left);
+			else
+				return returnNodePrivate(key,ptr->left);
+		}
+
+	}
+	else
+	{
+		return NULL;
+	}
+}
