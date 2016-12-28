@@ -18,7 +18,7 @@ public:
 	bts();
 	void addLeaf(int key);
 	void printInOrder();
-	
+	int returnRootKey();
 	node* returnNode(int key);
 	
 	

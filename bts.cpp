@@ -111,3 +111,15 @@ bts::node* bts::returnNodePrivate(int key,node* ptr )
 		return NULL;
 	}
 }
+int bts::returnRootKey()
+	{
+		if (root != NULL)
+		{
+			return root->key;
+		}						//check to make sure that root is 
+		else					//is pointing to some node						
+		{
+			return -1000;
+		}
+	}
+
