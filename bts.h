@@ -20,6 +20,7 @@ public:
 	void printInOrder();
 	int returnRootKey();
 	node* returnNode(int key);
+	void printChildern(int key);
 	
 	
 };

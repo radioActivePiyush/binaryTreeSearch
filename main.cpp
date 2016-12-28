@@ -20,5 +20,12 @@ int main(int argc, char const *argv[])
  mt.printInOrder();
  cout<<endl;
 
+for (int i = 0; i < 16; i++)
+ {
+ 	mt.printChildern(tree[i]);
+ 	cout<<endl;
+
+ }
+
 	return 0;
 }

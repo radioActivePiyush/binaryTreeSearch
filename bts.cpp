@@ -102,7 +102,7 @@ bts::node* bts::returnNodePrivate(int key,node* ptr )
 			if (key< ptr->key)
 				return returnNodePrivate(key,ptr->left);
 			else
-				return returnNodePrivate(key,ptr->left);
+				return returnNodePrivate(key,ptr->right);
 		}
 
 	}
@@ -122,4 +122,24 @@ int bts::returnRootKey()
 			return -1000;
 		}
 	}
+void bts::printChildern(int key)
+{
+	node* ptr = returnNode(key);
 
+	if (ptr != NULL)
+	{
+		cout<<"parent node = "<<ptr->key<<endl;
+
+		ptr->left == NULL?
+		cout<< "left child is null \n":
+		cout<< "left child = "<< ptr->left->key <<endl;
+
+		ptr->right == NULL?
+		cout<< "right child is null\n":
+		cout<< "right child = "<< ptr->right->key <<endl;		
+	}
+	else
+	{
+		cout<<"the key "<<key <<" is not in the tree"<<endl;
+	}
+}
